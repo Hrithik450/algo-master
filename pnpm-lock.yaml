@@ -31,7 +31,7 @@ importers:
         version: 0.31.9
       drizzle-orm:
         specifier: ^0.45.1
-        version: 0.45.1(pg@8.18.0)(postgres@3.4.8)
+        version: 0.45.1(@types/pg@8.16.0)(pg@8.18.0)(postgres@3.4.8)
       lucide-react:
         specifier: ^0.564.0
         version: 0.564.0(react@19.2.3)
@@ -50,9 +50,6 @@ importers:
       pg:
         specifier: ^8.18.0
         version: 8.18.0
-      postgres:
-        specifier: ^3.4.8
-        version: 3.4.8
       radix-ui:
         specifier: ^1.4.3
         version: 1.4.3(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -81,6 +78,9 @@ importers:
       '@types/node':
         specifier: ^20
         version: 20.19.33
+      '@types/pg':
+        specifier: ^8.16.0
+        version: 8.16.0
       '@types/react':
         specifier: ^19
         version: 19.2.14
@@ -1943,6 +1943,9 @@ packages:
 
   '@types/node@20.19.33':
     resolution: {integrity: sha512-Rs1bVAIdBs5gbTIKza/tgpMuG1k3U/UMJLWecIMxNdJFDMzcM5LOiLVRYh3PilWEYDIeUDv7bpiHPLPsbydGcw==}
+
+  '@types/pg@8.16.0':
+    resolution: {integrity: sha512-RmhMd/wD+CF8Dfo+cVIy3RR5cl8CyfXQ0tGgW6XBL8L4LM/UTEbNXYRbLwU6w+CgrKBNbrQWt4FUtTfaU5jSYQ==}
 
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
@@ -6228,6 +6231,12 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
+  '@types/pg@8.16.0':
+    dependencies:
+      '@types/node': 20.19.33
+      pg-protocol: 1.11.0
+      pg-types: 2.2.0
+
   '@types/react-dom@19.2.3(@types/react@19.2.14)':
     dependencies:
       '@types/react': 19.2.14
@@ -6774,8 +6783,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.45.1(pg@8.18.0)(postgres@3.4.8):
+  drizzle-orm@0.45.1(@types/pg@8.16.0)(pg@8.18.0)(postgres@3.4.8):
     optionalDependencies:
+      '@types/pg': 8.16.0
       pg: 8.18.0
       postgres: 3.4.8
 
@@ -8228,7 +8238,8 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  postgres@3.4.8: {}
+  postgres@3.4.8:
+    optional: true
 
   powershell-utils@0.1.0: {}
 

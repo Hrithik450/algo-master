@@ -29,7 +29,6 @@
     "next-auth": "^4.24.13",
     "nuqs": "^2.8.8",
     "pg": "^8.18.0",
-    "postgres": "^3.4.8",
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -41,6 +40,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.16.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-scroll": "^1.8.10",
