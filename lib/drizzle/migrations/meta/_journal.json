@@ -8,6 +8,13 @@
       "when": 1771598111279,
       "tag": "0000_remarkable_hitman",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1771649315748,
+      "tag": "0001_flat_grandmaster",
+      "breakpoints": true
     }
   ]
 }
